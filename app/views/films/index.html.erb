@@ -1,0 +1,10 @@
+<h1>Peliculas</h1>
+
+
+<% @films['results'].each do |film| %>
+<h2> <%= link_to film['title'], film_path(:pelicula => film) %> </h2>
+<p> Fecha de Lanzamiento = <%= film['release_date']%> </p>
+<p> director = <%= film['director']%> , productores: <%= film['producer']%> , Episodio n° <%= film['episode_id']%> </p>
+
+
+<% end %>

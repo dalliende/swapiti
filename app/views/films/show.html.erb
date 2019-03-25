@@ -1,0 +1,14 @@
+# encoding: utf-8
+<h1> <%= @film['tittle'] %> </h1>
+<h2> Datos Generales </h2>
+<p> Director: <%= @film['director']%>, Fecha de Lanzamiento: <%= @film['release_date']%>, Episodio N°<%= @film['episode_id']%>, Productores : <%= @film['producer']%></p>
+<p> <%= @film['opening_crawl']%></p>
+
+<h2> Personajes</h2>
+
+<p><% @characters.each do |char|%> <%= link_to char['name'], personaje_path(:personaje => char)%> , <%end %></p>
+
+
+
+<h2> Otros </h2>
+
