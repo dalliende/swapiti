@@ -96,5 +96,15 @@ class FilmsController < ApplicationController
 
 	end
 
+	def search
+		swap. SwApi.new
+		@films = swap.people_by_link('https://swapi.co/api/films/?search='+ params[:busqueda]) ['results']
+		@naves = swap.people_by_link('https://swapi.co/api/starships/?search='+ params[:busqueda])['results']
+		@characters = swap.people_by_link('https://swapi.co/api/people/?search=' + params[:busqueda])['results']
+		@planetas = swap.people_by_link('https://swapi.co/api/planets/?search=' + params[:busqueda])['results']
+
+	end
+
+
 end
 

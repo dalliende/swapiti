@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get "/planeta", to: "films#planeta", as: "planeta"
 
   get "/nave", to: "films#nave", as: "nave"
+
+  get "/search", to: "films#search", as: "search"
   
 end

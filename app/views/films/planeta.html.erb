@@ -17,3 +17,4 @@ Poblacion : <%= @planeta['population']%>.
 <h2> Peliculas </h2>
 
 <p> <% @films.each do |film|%> <%= link_to film['title'] , film_path(:pelicula => film['url'])%>, <% end %></p>
+

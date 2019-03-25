@@ -1,0 +1,17 @@
+<h1> Resultado Busqueda</h1>
+
+<h2> Peliculas </h2>
+
+<p> <% @films.each do |film|%> <%= link_to film['title'] , film_path(:pelicula => film['url'])%>, <% end %></p>
+
+<h2> Personajes </h2>
+
+<p><% @characters.each do |char|%> <%= link_to char['name'] , personaje_path(:url => char['url'])%> , <%end %></p>
+
+<h2> Planetas </h2>
+
+<p><% @planetas.each do |planeta|%> <%= link_to planeta['name'] , planeta_path(:url => planeta['url'])%> , <%end %></p>
+
+<h2> Naves </h2>
+
+<p><% @naves.each do |nave|%> <%= link_to nave['name'] , nave_path(:url => nave['url'])%> , <%end %></p>
