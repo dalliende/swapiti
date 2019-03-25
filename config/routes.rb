@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   get "/personaje", to: "films#personaje", as: "personaje"
 
+  get "/planeta", to: "films#planeta", as: "planeta"
+
+  get "/nave", to: "films#nave", as: "nave"
+  
 end

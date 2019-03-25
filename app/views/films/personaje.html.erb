@@ -1,5 +1,10 @@
 <h1> <%= @personaje["name"] %> </h1>
 <h2> Datos Generales </h2>
-<p> Año de Nacimiento: <%= @personaje['birth_year'] %> , Color de los Ojos: <%= @personaje['eye_color'] %>, sexo: <%= @personaje['gender'] %>, color del pelo: <%= @personaje['hair_color'] %>, Altura: <%= @personaje['height'] %>, peso: <%= @personaje['mass'] %>, color de piel: <%= @personaje['skin_color'] %> </p>
+<p> Año de Nacimiento: <%= @personaje['birth_year'] %> , Color de los Ojos: <%= @personaje['eye_color'] %>, sexo: <%= @personaje['gender'] %>, color del pelo: <%= @personaje['hair_color'] %>, Altura: <%= @personaje['height'] %>, peso: <%= @personaje['mass'] %>, color de piel: <%= @personaje['skin_color'] %>, planeta Origen : <%= link_to @planet['name'] , planeta_path(:url => @planet['url']) %> </p>
 <h2> Peliculas En las que aparece</h2>
-	
+
+<p> <% @films.each do |film|%> <%= link_to film['title'] , film_path(:pelicula => film['url'])%>, <% end %></p>
+
+<h2> Naves </h2>
+
+<p><% @naves.each do |nave|%> <%= link_to nave['name'] , nave_path(:url => nave['url'])%> , <%end %></p>

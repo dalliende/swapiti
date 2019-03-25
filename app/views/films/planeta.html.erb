@@ -1,0 +1,19 @@
+<h1> <%= @planeta["name"] %> </h1>
+
+<p> Periodo de Rotacion: <%= @planeta['rotation_period'] %> , 
+Periodo de traslación : <%= @planeta['orbital_period']%>,
+Diametro : <%= @planeta['diameter']%>,
+Clima : <%= @planeta['climate']%>,
+Gravedad: <%= @planeta['gravity']%>,
+terreno: <%= @planeta['terrain']%>,
+Agua en la superficie : <%= @planeta['surface_water']%>,
+Poblacion : <%= @planeta['population']%>.
+ </p>
+
+ <h2> Residentes </h2>
+
+ <p><% @characters.each do |char|%> <%= link_to char['name'] , personaje_path(:url => char['url'])%> , <%end %></p>
+
+<h2> Peliculas </h2>
+
+<p> <% @films.each do |film|%> <%= link_to film['title'] , film_path(:pelicula => film['url'])%>, <% end %></p>

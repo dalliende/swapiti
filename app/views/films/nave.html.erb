@@ -1,0 +1,20 @@
+<h1> <%= @nave['name'] %> </h1>
+
+<p> Modelo : <%=@nave['model'] %>,
+Constructor: <%=@nave['manufacturer'] %>,
+Costo en creditos: <%=@nave['cost_in_credits'] %>,
+Largo :<%=@nave['length'] %>,
+Maxima velocidad Atmosferica: <%=@nave['max_atmosphering_speed'] %>,
+Tripulacion: <%=@nave['crew'] %>,
+pasajeros: <%=@nave['passengers'] %>,
+Capacidad de Carga: <%=@nave['cargo_capacity'] %>,
+Consumibles:<%=@nave['consumables'] %> ,
+Velocidad del ultrasonido?: <%=@nave['hyperdrive_rating'] %>,
+MLGT: <%=@nave['MGLT'] %>,
+Clase: <%=@nave['starship_class'] %>,
+</p>
+<h2> Pilotos</h2>
+<p><% @characters.each do |char|%> <%= link_to char['name'] , personaje_path(:url => char['url'])%> , <%end %></p>
+<h2> Peliculas </h2>
+<p> <% @films.each do |film|%> <%= link_to film['title'] , film_path(:pelicula => film['url'])%>, <% end %></p>
+
